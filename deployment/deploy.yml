@@ -8,12 +8,12 @@
   vars:
     projects_path: /home/appadmin/apps
     logs_path: /var/log/apps
-    app_name: skeleton-api
+    app_name: circlr-api
     port: 4000
     db_dialect: pg
     db_host: 127.0.0.1
     db_user: appadmin
-    db_name: skeleton_db
+    db_name: circlr_db
   remote_user: appadmin
   tasks:
   - include_vars: vars/private.yml

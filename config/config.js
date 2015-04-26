@@ -1,6 +1,6 @@
 'use strict';
 module.exports = {
-  port: 3030,
+  port: 3000,
   database: {
     client: 'pg',
     connection: {
