@@ -79,10 +79,11 @@ knex.schema.hasTable('users')
     return knex.schema.hasTable('circles_photos').then(function (exists) {
       if (!exists) {
         return knex.schema.createTable('circles_photos', function (t) {
-          t.bigInteger('circle_id').references('id').inTable('circles');
+          t.bigIncrements('id').primary();
+          t.bigInteger('circle_id').references('id').inTable('circles').nullable();
           t.bigInteger('photo_id').references('id').inTable('photos');
           t.bigInteger('circlr_id').references('id').inTable('circlrs');
-          t.primary(['circle_id', 'photo_id', 'circlr_id']);
+          t.index(['circlr_id', 'circle_id', 'photo_id']);
         });
       } else {
         console.log('circles_photos table already exists.');
