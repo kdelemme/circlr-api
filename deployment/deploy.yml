@@ -9,7 +9,7 @@
     projects_path: /home/appadmin/apps
     logs_path: /var/log/apps
     app_name: circlr-api
-    port: 4000
+    port: 4001
     db_dialect: pg
     db_host: 127.0.0.1
     db_user: appadmin
