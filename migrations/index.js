@@ -50,11 +50,12 @@ knex.schema.hasTable('users')
       if (!exists) {
         return knex.schema.createTable('circles', function (t) {
           t.bigIncrements('id').primary();
-          t.uuid('uuid').unique().index('circles_uuid_idx');
+          t.uuid('uuid').index();
           t.biginteger('circlr_id').references('id').inTable('circlrs');
           t.string('name', 50);
           t.dateTime('created_at').defaultTo(knex.raw('now()'));
           t.dateTime('updated_at').defaultTo(knex.raw('now()'));
+          t.unique(['circlr_id', 'uuid']);
         });
       } else {
         console.log('circles table already exists.');
@@ -65,11 +66,12 @@ knex.schema.hasTable('users')
       if (!exists) {
         return knex.schema.createTable('photos', function (t) {
           t.bigIncrements('id').primary();
-          t.uuid('uuid').unique().index('photos_uuid_idx');
+          t.uuid('uuid').index();
           t.biginteger('circlr_id').references('id').inTable('circlrs');
           t.string('description', 100);
           t.dateTime('created_at').defaultTo(knex.raw('now()'));
           t.dateTime('updated_at').defaultTo(knex.raw('now()'));
+          t.unique(['circlr_id', 'uuid']);
         });
       } else {
         console.log('photos table already exists.');
