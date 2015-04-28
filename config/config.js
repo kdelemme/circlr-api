@@ -9,5 +9,9 @@ module.exports = {
       password : '',
       database : 'circlr_dev'
     }
+  },
+  upload: {
+    //path: '/var/www/static/circlr'
+    path: '/Users/kevin'
   }
 };

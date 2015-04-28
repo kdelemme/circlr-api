@@ -67,6 +67,7 @@ knex.schema.hasTable('users')
         return knex.schema.createTable('photos', function (t) {
           t.bigIncrements('id').primary();
           t.uuid('uuid').index();
+          t.string('path', 100);
           t.biginteger('circlr_id').references('id').inTable('circlrs');
           t.string('description', 100);
           t.dateTime('created_at').defaultTo(knex.raw('now()'));
