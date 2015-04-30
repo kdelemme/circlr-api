@@ -12,6 +12,6 @@ module.exports = {
   },
   upload: {
     //path: '/var/www/static/circlr'
-    path: '/Users/kevin'
+    path: '/tmp/Circlr'
   }
 };
