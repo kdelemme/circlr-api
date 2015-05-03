@@ -1,7 +1,5 @@
 # Circlr API
 
-
-
 ## Installation
 
 run `npm install`.
@@ -93,6 +91,13 @@ DELETE `http DELETE 127.0.0.1:3000/api/circlrs/CirclrName/circles/circleId acces
 
 GET  `http 127.0.0.1:3000/api/circlrs/CirclrName/circles/circleUUID/photos`
 
+#### Add photo to a circle
+
+POST `http 127.0.0.1:3000/api/circlrs/CirclrName/circles/circleId/photos/photoId access_token=ACCESS_TOKEN`
+
+#### Delete photo from a circle
+
+DELETE `http DELETE 127.0.0.1:3000/api/circlrs/CirclrName/circles/circleId/photos/photoId access_token=ACCESS_TOKEN`
 
 ### Photos
 
